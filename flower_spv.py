@@ -7,7 +7,7 @@ with open('flower.conf', 'r') as f:
 f.closed
 
 head = env[1].replace('CONDA_DIR=','').replace('\n','')
-tail = '/miniconda3/bin/celery'
+tail = '/miniconda3/bin/flower'
 comm = data[1].replace('[PATH]', head+ tail) 
 data[1] = comm
 
