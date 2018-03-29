@@ -1,4 +1,4 @@
-with open('var.sh', 'r') as f:
+with open('setup.conf', 'r') as f:
     env = f.readlines()
 f.closed
 
