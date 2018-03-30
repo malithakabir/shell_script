@@ -11,7 +11,7 @@ def run_script(script_path):
     p = Popen(["python", "-u", script_path],stdout=PIPE)
     p.wait()
     out = p.stdout.readlines()
-    filename = script_path.replace('py', 'txt')
+    filename = script_path.replace('.py', '.txt')
     with open(filename, 'wb') as f:
         for line in out:
             f.write(line)
