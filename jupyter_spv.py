@@ -7,7 +7,7 @@ with open('jupyter.conf', 'r') as f:
 f.closed
 
 head = env[1].replace('CONDA_DIR=','').replace('\n','')
-tail = '/miniconda3/bin/jupyter-notebook\n'
+tail = '/miniconda2/bin/jupyter-notebook\n'
 comm = data[1].replace('[PATH]\n', head) + tail
 data[1] = comm
 
