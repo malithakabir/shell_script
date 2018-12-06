@@ -29,7 +29,7 @@ def run_command(logfile_path, config_path, train_dir):
     td=NOTEBOOK_BASE_DIR + train_dir
     
     os.chdir(TRAIN_MODULE_DIR)
-    p = Popen(["python", "-u", 'train.py', '--logtostderr', '--pipeline_config_path=%s'%cp, '--train_dir=%s'%td],stdout=PIPE)
+    p = Popen(["python", "-u", 'model_main.py', '--logtostderr', '--pipeline_config_path=%s'%cp, '--model_dir=%s'%td],stdout=PIPE)
     p.wait()
     out = p.stdout.readlines()
     
